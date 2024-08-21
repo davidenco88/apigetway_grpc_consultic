@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package logging;
+
+service LoggingService {
+  rpc pin (Empty) returns (CreateLoggingDto) {}
+  rpc createLogging (CreateLoggingDto) returns (CreateLoggingDto) {}
+}
+
+message Empty {};
+
+message CreateLoggingDto {
+  string parameter = 1;
+}
